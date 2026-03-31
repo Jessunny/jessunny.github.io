@@ -61,6 +61,25 @@
   .section-kicker { font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text3); margin-bottom: 0.35rem; }
   .section-title { font-size: 1.45rem; font-weight: 700; letter-spacing: -0.025em; margin-bottom: 2rem; color: var(--text); }
 
+  /* ABOUT ACCORDIONS */
+  .about-accordions { display: flex; flex-direction: column; gap: 0.55rem; margin-bottom: 2.5rem; }
+  .about-card { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: border-color 0.15s; }
+  .about-card:hover { border-color: var(--border2); }
+  .about-trigger { width: 100%; background: none; border: none; cursor: pointer; padding: 1rem 1.3rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; text-align: left; }
+  .about-trigger:hover { background: var(--bg2); }
+  .about-trigger-left { display: flex; align-items: center; gap: 0.75rem; }
+  .about-trigger-icon { font-size: 1rem; }
+  .about-trigger-title { font-size: 0.9rem; font-weight: 600; color: var(--text); }
+  .about-trigger-sub { font-size: 0.78rem; color: var(--text2); margin-top: 0.1rem; }
+  .about-chevron { font-size: 0.65rem; color: var(--text3); transition: transform 0.2s; flex-shrink: 0; }
+  .about-card.open .about-chevron { transform: rotate(180deg); }
+  .about-body { display: none; border-top: 1px solid var(--border); padding: 1.1rem 1.3rem 1.2rem; background: var(--bg2); }
+  .about-card.open .about-body { display: block; }
+  .about-body p { font-size: 0.875rem; color: var(--text2); line-height: 1.8; margin-bottom: 0.75rem; }
+  .about-body p:last-child { margin-bottom: 0; }
+  .about-body .hobby-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.75rem; }
+  .hobby-tag { font-size: 0.75rem; color: var(--pill-text); background: var(--pill); border: 1px solid var(--border); padding: 0.22rem 0.6rem; border-radius: 5px; }
+
   /* ABOUT */
   .about-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3.5rem; align-items: start; }
   .about-text p { font-size: 0.9rem; color: var(--text2); margin-bottom: 0.9rem; line-height: 1.8; }
@@ -87,7 +106,7 @@
   .exp-summary { font-size: 0.865rem; color: var(--text2); line-height: 1.75; margin-bottom: 0.7rem; }
   .exp-ul { list-style: none; display: flex; flex-direction: column; gap: 0.38rem; }
   .exp-ul li { font-size: 0.865rem; color: var(--text2); padding-left: 1.1rem; position: relative; line-height: 1.6; }
-  .exp-ul li::before { content: '—'; position: absolute; left: 0; color: var(--text3); font-size: 0.75rem; top: 0.3rem; }
+  .exp-ul li::before { content: '·'; position: absolute; left: 0; color: var(--text3); font-size: 1rem; top: 0.15rem; }
 
   /* PROJECTS */
   .proj-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
@@ -183,7 +202,7 @@
 <div id="home">
   <p class="hero-location"><span class="hero-dot"></span> Nashville, TN</p>
   <h1 class="hero-name">Jesse Dean II</h1>
-  <p class="hero-role">IT Systems Engineer</p>
+  <p class="hero-role">IT Support &amp; Systems Engineer</p>
   <p class="hero-desc">Specializing in identity, endpoint, and access management across hybrid environments. I build systems on Okta, MDM platforms, HRIS integrations, and Jira that reduce manual work and scale with the org.</p>
   <div class="hero-btns">
     <a href="#connect" class="cta">Get in touch</a>
@@ -197,12 +216,47 @@
 <section id="about" class="section">
   <p class="section-kicker">Background</p>
   <h2 class="section-title">About</h2>
-  <div class="about-grid">
-    <div class="about-text">
-      <p>I'm an IT Systems Engineer who's worked across the full support spectrum — from hands-on Tier 1 hardware repair to owning enterprise-scale identity and access infrastructure. I take ownership of the systems I'm responsible for and build things that are practical and easy to maintain long-term.</p>
-      <p>I partner closely with Security, HR, and Engineering teams to deliver solutions that work for everyone. I also mentor Service Desk teammates through complex escalations and help build the processes that make the whole team more effective.</p>
-      <p>Currently at Onebrief handling IAM, endpoint, and Jira infrastructure in a remote-first environment.</p>
+
+  <div class="about-accordions">
+
+    <div class="about-card">
+      <button class="about-trigger" onclick="toggleAbout(this)">
+        <div class="about-trigger-left">
+          <span class="about-trigger-icon">💼</span>
+          <div>
+            <div class="about-trigger-title">Professional Background</div>
+            <div class="about-trigger-sub">Career, skills &amp; what I work on</div>
+          </div>
+        </div>
+        <span class="about-chevron">▾</span>
+      </button>
+      <div class="about-body">
+        <p>I'm an IT Support and Systems Engineer based in Nashville, TN. I've worked across the full support spectrum, from hands-on Tier 1 hardware repair to owning enterprise-scale identity and access infrastructure. I've spent years building systems that actually hold up: Okta lifecycle automation, MDM deployments, HRIS integrations, and org-wide Jira infrastructure.</p>
+        <p>I take full ownership of what I build and make sure it's practical, secure, and easy for teams to maintain. I work closely with Security, HR, and Engineering to deliver solutions that work for everyone, not just IT. I also enjoy mentoring Service Desk teammates through complex issues and building the processes that make the whole team sharper.</p>
+        <p>Currently at Onebrief, supporting a remote-first defense-tech environment with a focus on IAM, endpoint management, and Jira platform administration.</p>
+      </div>
     </div>
+
+    <div class="about-card">
+      <button class="about-trigger" onclick="toggleAbout(this)">
+        <div class="about-trigger-left">
+          <span class="about-trigger-icon">🏕️</span>
+          <div>
+            <div class="about-trigger-title">Personal Life</div>
+            <div class="about-trigger-sub">Outside of work &amp; hobbies</div>
+          </div>
+        </div>
+        <span class="about-chevron">▾</span>
+      </button>
+      <div class="about-body">
+        <p>When I'm not at a keyboard, you'll most likely find me outside. Camping is one of my favorite ways to unwind. There's something about getting off the grid for a weekend, whether it's a tent in the woods or a fire pit somewhere in Tennessee, that just resets everything.</p>
+        <p>I also enjoy staying active, spending time with family and friends, and gaming when I get the chance. Born and raised in Tennessee, Nashville is home and I'm proud of it.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="about-grid">
     <div>
       <div class="skill-block">
         <div class="skill-label">Identity &amp; Access</div>
@@ -210,19 +264,21 @@
       </div>
       <div class="skill-block">
         <div class="skill-label">Endpoint &amp; MDM</div>
-        <div class="pills"><span class="pill">Kandji</span><span class="pill">Intune</span><span class="pill">JamF</span><span class="pill">CrowdStrike</span><span class="pill">Defender</span><span class="pill">macOS</span><span class="pill">Windows</span></div>
+        <div class="pills"><span class="pill">Kandji</span><span class="pill">Intune</span><span class="pill">JamF</span><span class="pill">macOS</span><span class="pill">Windows</span></div>
       </div>
       <div class="skill-block">
         <div class="skill-label">Cloud &amp; Infrastructure</div>
-        <div class="pills"><span class="pill">Azure</span><span class="pill">AWS</span><span class="pill">M365</span><span class="pill">GCC</span><span class="pill">DNS</span><span class="pill">VPN</span></div>
+        <div class="pills"><span class="pill">Azure</span><span class="pill">AWS</span><span class="pill">Terraform</span><span class="pill">DNS</span><span class="pill">VPN</span></div>
       </div>
+    </div>
+    <div>
       <div class="skill-block">
         <div class="skill-label">Automation &amp; Dev</div>
-        <div class="pills"><span class="pill">Python</span><span class="pill">PowerShell</span><span class="pill">SQL</span><span class="pill">Okta Workflows</span><span class="pill">n8n</span><span class="pill">REST APIs</span></div>
+        <div class="pills"><span class="pill">Python</span><span class="pill">PowerShell</span><span class="pill">Bash</span><span class="pill">Okta Workflows</span><span class="pill">n8n</span><span class="pill">REST APIs</span></div>
       </div>
       <div class="skill-block">
         <div class="skill-label">ITSM &amp; Security</div>
-        <div class="pills"><span class="pill">Jira</span><span class="pill">Jira ITAM</span><span class="pill">SOC 2</span><span class="pill">PCI</span><span class="pill">SIEM</span><span class="pill">EDR</span></div>
+        <div class="pills"><span class="pill">Jira</span><span class="pill">Jira ITAM</span><span class="pill">CrowdStrike</span><span class="pill">MS Defender</span><span class="pill">Drata</span><span class="pill">Tenable</span><span class="pill">SIEM</span><span class="pill">EDR</span></div>
       </div>
     </div>
   </div>
@@ -245,9 +301,9 @@
       <div class="exp-body">
         <p class="exp-summary">Supporting L1–L3 issues at a defense-tech startup while managing identity infrastructure, Jira platform administration, and a GCC compliance migration.</p>
         <ul class="exp-ul">
-          <li>Managed Okta lifecycle workflows for onboarding, offboarding, and access changes — reduced manual access work 60–75%.</li>
+          <li>Managed Okta lifecycle workflows for onboarding, offboarding, and access changes. Reduced manual access work 60–75%.</li>
           <li>Managed SCIM provisioning, SSO, and SAML 2.0 across 150+ SaaS applications.</li>
-          <li>Led end-to-end Atlassian (Jira) implementation with IAM best practices — cutting ticketing issues 60–70%.</li>
+          <li>Led end-to-end Atlassian (Jira) implementation with IAM best practices, cutting ticketing issues 60–70%.</li>
           <li>Led M365 tenant migration from Commercial to GCC including RBAC, Conditional Access, and security controls.</li>
         </ul>
       </div>
@@ -265,10 +321,10 @@
         <p class="exp-summary">Senior engineer supporting identity, endpoint, and SaaS operations across a 300+ application environment.</p>
         <ul class="exp-ul">
           <li>Assisted Okta lifecycle workflows, reducing manual access work 40–50%.</li>
-          <li>Managed Jira Service Management — standardizing workflows and centralizing team operations.</li>
+          <li>Managed Jira Service Management, standardizing workflows and centralizing team operations.</li>
           <li>Led endpoint management across Kandji and Intune with automated compliance baselines.</li>
           <li>Built API integrations connecting Atlassian, Entra ID, Okta, and Salesforce.</li>
-          <li>Built GPT-based Python automations across IT, HR, Finance, Sales, and Product — reducing manual effort 30%.</li>
+          <li>Built GPT-based Python automations across IT, HR, Finance, Sales, and Product. Reduced manual effort 30%.</li>
         </ul>
       </div>
     </div>
@@ -284,10 +340,10 @@
       <div class="exp-body">
         <p class="exp-summary">Managed identity, endpoint, and security operations for a fintech company. Led compliance initiatives and consolidated vendor spend.</p>
         <ul class="exp-ul">
-          <li>Automated access requests and audit workflows via Entra ID and PAM — reduced manual reviews 60%, provisioning from hours to minutes.</li>
+          <li>Automated access requests and audit workflows via Entra ID and PAM. Reduced manual reviews by 60% and cut provisioning from hours to minutes.</li>
           <li>Built phishing simulation program integrated with Exchange Online, reducing incidents 45%.</li>
           <li>Audited and consolidated M365 licensing and vendor contracts, saving ~$23K annually.</li>
-          <li>Led SOC 2 and PCI compliance — remediation, audit support, and control documentation.</li>
+          <li>Led SOC 2 and PCI compliance work including remediation, audit support, and control documentation.</li>
           <li>Built Conditional Access policies enforcing passwordless MFA and risk-based authentication.</li>
         </ul>
       </div>
@@ -302,9 +358,9 @@
         <div class="exp-aside"><div class="exp-date">Aug 2022 – Jul 2023</div><span class="exp-toggle">▾</span></div>
       </button>
       <div class="exp-body">
-        <p class="exp-summary">Tier 1–2 support covering identity, endpoint, and networking — consistently meeting SLAs while taking on IAM automation work.</p>
+        <p class="exp-summary">Tier 1 and 2 support covering identity, endpoint, and networking. Consistently met SLAs while taking on IAM automation work.</p>
         <ul class="exp-ul">
-          <li>Built Okta onboarding automation — reduced new-hire setup time 30%.</li>
+          <li>Built Okta onboarding automation that cut new-hire setup time by 30%.</li>
           <li>Managed Kandji and Intune for endpoint management and compliance enforcement.</li>
           <li>Implemented Azure Virtual Desktop for secure distributed team access.</li>
           <li>Built hardware lifecycle processes in Jira ITAM, improving asset tracking across teams.</li>
@@ -323,7 +379,7 @@
       <div class="exp-body">
         <p class="exp-summary">Hands-on hardware and software repair across consumer and enterprise environments. Foundation for everything that came after.</p>
         <ul class="exp-ul">
-          <li>Diagnosed and resolved hardware/software issues — OS recovery, malware removal, data restoration.</li>
+          <li>Diagnosed and resolved hardware and software issues including OS recovery, malware removal, and data restoration.</li>
           <li>Delivered in-home consultations for networking, security camera, and smart home setups.</li>
           <li>Advanced Repair Agent and Smart Home Specialist at Best Buy / Geek Squad.</li>
         </ul>
@@ -359,7 +415,7 @@
 
     <div class="proj-card">
       <div class="proj-name">M365 Commercial → GCC Migration</div>
-      <p class="proj-desc">Led a full M365 tenant migration to Government Community Cloud for federal compliance. Rebuilt RBAC, Conditional Access, and security controls — migrating mailboxes, SharePoint, and Teams with zero data loss.</p>
+      <p class="proj-desc">Led a full M365 tenant migration to Government Community Cloud for federal compliance. Rebuilt RBAC, Conditional Access, and security controls, then migrated mailboxes, SharePoint, and Teams with zero data loss.</p>
       <div class="proj-pills"><span class="proj-pill">Microsoft 365</span><span class="proj-pill">GCC</span><span class="proj-pill">RBAC</span><span class="proj-pill">Conditional Access</span></div>
     </div>
 
@@ -383,7 +439,7 @@
 
     <div class="proj-card">
       <div class="proj-name">Cross-Platform API Integration Hub</div>
-      <p class="proj-desc">Built bidirectional API integrations between Atlassian, Okta, Entra ID, and Salesforce to keep identity and operational data consistent — eliminating manual syncing across platforms.</p>
+      <p class="proj-desc">Built bidirectional API integrations between Atlassian, Okta, Entra ID, and Salesforce to keep identity and operational data consistent, eliminating manual syncing across platforms.</p>
       <div class="proj-pills"><span class="proj-pill">REST APIs</span><span class="proj-pill">Okta</span><span class="proj-pill">Entra ID</span><span class="proj-pill">Salesforce</span><span class="proj-pill">Python</span></div>
     </div>
 
@@ -395,7 +451,7 @@
 
     <div class="proj-card">
       <div class="proj-name">Corporate IT End-User Document Hub</div>
-      <p class="proj-desc">Built a self-service knowledge base for the most common end-user issues — surfaced in the Jira portal before ticket submission. Reduced repeat ticket volume and freed the Service Desk for higher-complexity work.</p>
+      <p class="proj-desc">Built a self-service knowledge base for the most common end-user issues, surfaced in the Jira portal before ticket submission. Reduced repeat ticket volume and freed the Service Desk for higher-complexity work.</p>
       <div class="proj-pills"><span class="proj-pill">Knowledge Base</span><span class="proj-pill">Jira SM</span><span class="proj-pill">Self-Service</span><span class="proj-pill">Documentation</span></div>
     </div>
 
@@ -481,11 +537,12 @@
 
 <footer>
   <p>Jesse Dean II &nbsp;·&nbsp; Nashville, TN</p>
-  <p>IT Systems Engineer</p>
+  <p>IT Support &amp; Systems Engineer</p>
 </footer>
 
 <script>
   function toggleExp(btn) { btn.closest('.exp-card').classList.toggle('open'); }
+  function toggleAbout(btn) { btn.closest('.about-card').classList.toggle('open'); }
 
   async function sendMsg(e) {
     e.preventDefault();
@@ -507,7 +564,7 @@
         body: JSON.stringify(body)
       });
       if (res.ok) {
-        status.textContent = 'Message sent — I\'ll get back to you soon.';
+        status.textContent = "Message sent. I'll get back to you soon.";
         status.style.color = 'var(--green)';
         e.target.reset();
       } else {
