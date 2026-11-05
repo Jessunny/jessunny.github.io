@@ -4,6 +4,12 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Jesse Dean II — IT Systems Engineer</title>
+<meta name="description" content="Jesse Dean II, IT Systems Engineer in Nashville. Identity, Atlassian, and automation work: Okta, Jira Service Management on Government Cloud, Slack apps on GCP."/>
+<meta property="og:title" content="Jesse Dean II — IT Systems Engineer"/>
+<meta property="og:description" content="Identity, Atlassian, and automation work in FedRAMP and CMMC environments."/>
+<meta property="og:type" content="website"/>
+<meta name="theme-color" content="#0d1117"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d1117'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%2358a6ff' text-anchor='middle'%3EJD%3C/text%3E%3C/svg%3E"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -17,7 +23,7 @@
     --border2:  #444c56;
     --text:     #e6edf3;
     --text2:    #8b949e;
-    --text3:    #484f58;
+    --text3:    #7d8590;
     --accent:   #58a6ff;
     --accent2:  #1f6feb;
     --accent-bg:#1f3a5f;
@@ -54,7 +60,7 @@
   .hero-btns a { font-size: 0.82rem; font-weight: 500; padding: 0.45rem 1rem; border-radius: 6px; text-decoration: none; border: 1px solid var(--border); color: var(--text2); transition: all 0.15s; }
   .hero-btns a:hover { border-color: var(--border2); color: var(--text); background: var(--bg2); text-decoration: none; }
   .hero-btns a.cta { background: var(--accent2); color: #fff; border-color: var(--accent2); }
-  .hero-btns a.cta:hover { background: var(--accent); border-color: var(--accent); opacity: 1; }
+  .hero-btns a.cta:hover { background: #1158c7; border-color: #1158c7; opacity: 1; }
 
   /* SECTION */
   .section { border-top: 1px solid var(--border); padding: 3.5rem 2rem; max-width: 880px; margin: 0 auto; }
@@ -67,6 +73,7 @@
   .about-card:hover { border-color: var(--border2); }
   .about-trigger { width: 100%; background: none; border: none; cursor: pointer; padding: 1rem 1.3rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; text-align: left; }
   .about-trigger:hover { background: var(--bg2); }
+  .block, .about-trigger-title, .about-trigger-sub, .exp-meta, .exp-role, .exp-company, .exp-date { display: block; }
   .about-trigger-left { display: flex; align-items: center; gap: 0.75rem; }
   .about-trigger-icon { font-size: 1rem; }
   .about-trigger-title { font-size: 0.9rem; font-weight: 600; color: var(--text); }
@@ -162,7 +169,7 @@
     border-radius: 7px; padding: 0.55rem 1.2rem; font-size: 0.83rem; font-weight: 600;
     cursor: pointer; transition: background 0.15s; font-family: var(--sans);
   }
-  .form-btn:hover { background: var(--accent); }
+  .form-btn:hover { background: #1158c7; }
   .form-note { font-size: 0.78rem; color: var(--green); margin-top: 0.25rem; min-height: 1rem; }
   .connect-links { display: flex; flex-direction: column; gap: 0.5rem; }
   .connect-row { display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 1rem; border: 1px solid var(--border); border-radius: 9px; text-decoration: none; transition: border-color 0.15s, background 0.15s; background: var(--bg); }
@@ -179,9 +186,33 @@
   @media (max-width: 640px) {
     .about-grid { grid-template-columns: 1fr; gap: 2rem; }
     .nav-links { display: none; }
-    .exp-aside { display: none; }
+    .exp-aside { flex-direction: column; align-items: flex-end; gap: 0.2rem; }
+    .exp-date { white-space: normal; text-align: right; font-size: 0.7rem; }
     .apps-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
     .proj-grid { grid-template-columns: 1fr; }
+  }
+
+  /* OWNED */
+  .owned-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.6rem; margin-bottom: 1rem; }
+  .owned-card { border: 1px solid var(--border); border-left: 3px solid var(--accent2); border-radius: 10px; padding: 1.1rem 1.2rem; background: var(--bg); }
+  .owned-card h3 { font-size: 0.9rem; font-weight: 600; color: var(--text); margin-bottom: 0.35rem; }
+  .owned-card p { font-size: 0.845rem; color: var(--text2); line-height: 1.6; }
+  .owned-card.wide { grid-column: 1 / -1; }
+  .owned-card ul { list-style: none; margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.3rem; }
+  .owned-card li { font-size: 0.845rem; color: var(--text2); line-height: 1.6; padding-left: 1.1rem; position: relative; }
+  .owned-card li::before { content: '·'; position: absolute; left: 0; color: var(--text3); }
+  .owned-card li strong { color: var(--text); font-weight: 500; }
+  .also-line { font-size: 0.82rem; color: var(--text2); line-height: 1.7; border: 1px dashed var(--border); border-radius: 10px; padding: 0.9rem 1.2rem; margin-bottom: 2rem; }
+  .also-line strong { color: var(--text); font-weight: 500; }
+  .proj-sub { font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text3); margin: 0 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+  .proj-credit { font-size: 0.72rem; color: var(--text3); margin-bottom: 0.4rem; }
+  @media (max-width: 640px) { .owned-grid { grid-template-columns: 1fr; } .owned-card.wide { grid-column: auto; } }
+
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; animation: none !important; }
   }
 </style>
 </head>
@@ -203,12 +234,12 @@
   <p class="hero-location"><span class="hero-dot"></span> Nashville, TN</p>
   <h1 class="hero-name">Jesse Dean II</h1>
   <p class="hero-role">IT Support &amp; Systems Engineer</p>
-  <p class="hero-desc">Specializing in identity, endpoint, and access management across hybrid environments. I build systems on Okta, MDM platforms, HRIS integrations, and Jira that reduce manual work and scale with the org.</p>
+  <p class="hero-desc">I work on identity, access, and the systems teams use every day. Right now that's inside FedRAMP and CMMC boundaries, where a lot of the usual tools aren't allowed, so I build what's missing: the company's Jira and Confluence on Atlassian Government Cloud, the access model in Okta, and, with my teammates, the Slack apps that tie them together.</p>
   <div class="hero-btns">
     <a href="#connect" class="cta">Get in touch</a>
-    <a href="https://www.linkedin.com/in/jesse-dean-ii/" target="_blank">LinkedIn ↗</a>
-    <a href="https://github.com/Jessunny" target="_blank">GitHub ↗</a>
-    <a href="https://www.credly.com/users/jesse-dean.7c10e070" target="_blank">Credly ↗</a>
+    <a href="https://www.linkedin.com/in/jesse-dean-ii/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a href="https://github.com/Jessunny" target="_blank" rel="noopener">GitHub ↗</a>
+    <a href="https://www.credly.com/users/jesse-dean.7c10e070" target="_blank" rel="noopener">Credly ↗</a>
   </div>
 </div>
 
@@ -220,32 +251,32 @@
   <div class="about-accordions">
 
     <div class="about-card">
-      <button class="about-trigger" onclick="toggleAbout(this)">
-        <div class="about-trigger-left">
+      <button type="button" class="about-trigger" aria-expanded="false" onclick="toggleAbout(this)">
+        <span class="about-trigger-left">
           <span class="about-trigger-icon">💼</span>
-          <div>
-            <div class="about-trigger-title">Professional Background</div>
-            <div class="about-trigger-sub">Career, skills &amp; what I work on</div>
-          </div>
-        </div>
+          <span class="block">
+            <span class="about-trigger-title">Professional Background</span>
+            <span class="about-trigger-sub">Career, skills &amp; what I work on</span>
+          </span>
+        </span>
         <span class="about-chevron">▾</span>
       </button>
       <div class="about-body">
-        <p>I'm an IT Support and Systems Engineer based in Nashville, TN. I've worked across the full support spectrum, from hands-on Tier 1 hardware repair to owning enterprise-scale identity and access infrastructure. I've spent years building systems that actually hold up: Okta lifecycle automation, MDM deployments, HRIS integrations, and org-wide Jira infrastructure.</p>
-        <p>I take full ownership of what I build and make sure it's practical, secure, and easy for teams to maintain. I work closely with Security, HR, and Engineering to deliver solutions that work for everyone, not just IT. I also enjoy mentoring Service Desk teammates through complex issues and building the processes that make the whole team sharper.</p>
-        <p>Currently at Onebrief, supporting a remote-first defense-tech environment with a focus on IAM, endpoint management, and Jira platform administration.</p>
+        <p>I'm an IT Support and Systems Engineer based in Nashville, TN. I started fixing hardware at Geek Squad and worked my way up to owning identity and access for whole companies. I've spent years building systems that actually hold up: Okta lifecycle automation, MDM deployments, HRIS integrations, and org-wide Jira infrastructure.</p>
+        <p>I take full ownership of what I build and make sure it's practical, secure, and easy for teams to maintain. I work closely with Security, HR, and Engineering, because most access problems start outside IT. I also like walking Service Desk teammates through the hard tickets and writing down how we fixed them.</p>
+        <p>Currently at Onebrief, a remote-first defense-tech company. I own the Atlassian platform there, wrote the RBAC model we run access on, and build the integrations that hold our identity, ticketing, and Slack together.</p>
       </div>
     </div>
 
     <div class="about-card">
-      <button class="about-trigger" onclick="toggleAbout(this)">
-        <div class="about-trigger-left">
+      <button type="button" class="about-trigger" aria-expanded="false" onclick="toggleAbout(this)">
+        <span class="about-trigger-left">
           <span class="about-trigger-icon">🏕️</span>
-          <div>
-            <div class="about-trigger-title">Personal Life</div>
-            <div class="about-trigger-sub">Outside of work &amp; hobbies</div>
-          </div>
-        </div>
+          <span class="block">
+            <span class="about-trigger-title">Personal Life</span>
+            <span class="about-trigger-sub">Outside of work &amp; hobbies</span>
+          </span>
+        </span>
         <span class="about-chevron">▾</span>
       </button>
       <div class="about-body">
@@ -268,17 +299,17 @@
       </div>
       <div class="skill-block">
         <div class="skill-label">Cloud &amp; Infrastructure</div>
-        <div class="pills"><span class="pill">Azure</span><span class="pill">AWS</span><span class="pill">Terraform</span><span class="pill">DNS</span><span class="pill">VPN</span></div>
+        <div class="pills"><span class="pill">GCP</span><span class="pill">Cloud Run</span><span class="pill">Cloud Build</span><span class="pill">Azure</span><span class="pill">AWS</span><span class="pill">Terraform</span><span class="pill">DNS</span><span class="pill">VPN</span></div>
       </div>
     </div>
     <div>
       <div class="skill-block">
         <div class="skill-label">Automation &amp; Dev</div>
-        <div class="pills"><span class="pill">Python</span><span class="pill">PowerShell</span><span class="pill">Bash</span><span class="pill">Okta Workflows</span><span class="pill">n8n</span><span class="pill">REST APIs</span></div>
+        <div class="pills"><span class="pill">Python</span><span class="pill">PowerShell</span><span class="pill">Bash</span><span class="pill">Node / TypeScript</span><span class="pill">Okta Workflows</span><span class="pill">Jira Automation</span><span class="pill">Slack apps</span><span class="pill">n8n</span><span class="pill">REST APIs</span></div>
       </div>
       <div class="skill-block">
         <div class="skill-label">ITSM &amp; Security</div>
-        <div class="pills"><span class="pill">Jira</span><span class="pill">Jira ITAM</span><span class="pill">CrowdStrike</span><span class="pill">MS Defender</span><span class="pill">Drata</span><span class="pill">Tenable</span><span class="pill">SIEM</span><span class="pill">EDR</span></div>
+        <div class="pills"><span class="pill">Jira</span><span class="pill">JSM</span><span class="pill">Confluence</span><span class="pill">Atlassian Gov Cloud</span><span class="pill">Jira Assets</span><span class="pill">CrowdStrike</span><span class="pill">MS Defender</span><span class="pill">Drata</span><span class="pill">Tenable</span><span class="pill">SIEM</span><span class="pill">EDR</span></div>
       </div>
     </div>
   </div>
@@ -291,31 +322,36 @@
   <div class="exp-list">
 
     <div class="exp-card">
-      <button class="exp-btn" onclick="toggleExp(this)">
-        <div class="exp-meta">
-          <div class="exp-role">IT Support Engineer</div>
-          <div class="exp-company">Onebrief &nbsp;·&nbsp; Remote</div>
-        </div>
-        <div class="exp-aside"><div class="exp-date">Dec 2025 – Present</div><span class="exp-toggle">▾</span></div>
+      <button type="button" class="exp-btn" aria-expanded="false" onclick="toggleExp(this)">
+        <span class="exp-meta">
+          <span class="exp-role">IT Support Engineer</span>
+          <span class="exp-company">Onebrief &nbsp;·&nbsp; Remote</span>
+        </span>
+        <span class="exp-aside"><span class="exp-date">Dec 2025 – Present</span><span class="exp-toggle">▾</span></span>
       </button>
       <div class="exp-body">
-        <p class="exp-summary">Supporting L1–L3 issues at a defense-tech startup while managing identity infrastructure, Jira platform administration, and a GCC compliance migration.</p>
+        <p class="exp-summary">L1–L3 support at a defense-tech startup, plus ownership of the Atlassian platform, the Okta access model, and a GCC compliance migration. Close to 1,000 tickets closed this year.</p>
         <ul class="exp-ul">
+          <li>Owned the Atlassian build-out on Government Cloud: Jira, JSM, and Confluence for about 20 teams, most of them moved off Linear and Notion. Cut ticketing issues 60–70%.</li>
+          <li>Built the company-wide change request process in Jira: four change types, director and GRC review gates, test plans and change windows, and a change calendar.</li>
+          <li>Built application review and onboarding in Jira: per-app request forms, risk-based routing to GRC and Security, and a one-click onboarding checklist.</li>
+          <li>Proposed the RBAC process and policy: access through Okta groups and roles, changes through request and approval.</li>
+          <li>Set up SSO and SCIM from Okta into GitHub Enterprise Server, with team access driven by Okta groups.</li>
+          <li>Co-built a Slack ↔ Jira bridge on GCP for gov cloud and rolled it out to five team help channels.</li>
           <li>Managed Okta lifecycle workflows for onboarding, offboarding, and access changes. Reduced manual access work 60–75%.</li>
-          <li>Managed SCIM provisioning, SSO, and SAML 2.0 across 150+ SaaS applications.</li>
-          <li>Led end-to-end Atlassian (Jira) implementation with IAM best practices, cutting ticketing issues 60–70%.</li>
+          <li>Managed SCIM provisioning, SSO, and SAML 2.0 across 150+ SaaS applications, and required managed devices on every CMMC app's auth policy.</li>
           <li>Led M365 tenant migration from Commercial to GCC including RBAC, Conditional Access, and security controls.</li>
         </ul>
       </div>
     </div>
 
     <div class="exp-card">
-      <button class="exp-btn" onclick="toggleExp(this)">
-        <div class="exp-meta">
-          <div class="exp-role">Sr. IT Support Engineer</div>
-          <div class="exp-company">Built Technologies &nbsp;·&nbsp; Nashville, TN &nbsp;·&nbsp; Hybrid</div>
-        </div>
-        <div class="exp-aside"><div class="exp-date">Apr 2025 – Nov 2025</div><span class="exp-toggle">▾</span></div>
+      <button type="button" class="exp-btn" aria-expanded="false" onclick="toggleExp(this)">
+        <span class="exp-meta">
+          <span class="exp-role">Sr. IT Support Engineer</span>
+          <span class="exp-company">Built Technologies &nbsp;·&nbsp; Nashville, TN &nbsp;·&nbsp; Hybrid</span>
+        </span>
+        <span class="exp-aside"><span class="exp-date">Apr 2025 – Nov 2025</span><span class="exp-toggle">▾</span></span>
       </button>
       <div class="exp-body">
         <p class="exp-summary">Senior engineer supporting identity, endpoint, and SaaS operations across a 300+ application environment.</p>
@@ -330,12 +366,12 @@
     </div>
 
     <div class="exp-card">
-      <button class="exp-btn" onclick="toggleExp(this)">
-        <div class="exp-meta">
-          <div class="exp-role">Systems Administrator</div>
-          <div class="exp-company">Strategycorps &nbsp;·&nbsp; Brentwood, TN &nbsp;·&nbsp; Hybrid</div>
-        </div>
-        <div class="exp-aside"><div class="exp-date">Jul 2023 – Apr 2025</div><span class="exp-toggle">▾</span></div>
+      <button type="button" class="exp-btn" aria-expanded="false" onclick="toggleExp(this)">
+        <span class="exp-meta">
+          <span class="exp-role">Systems Administrator</span>
+          <span class="exp-company">Strategycorps &nbsp;·&nbsp; Brentwood, TN &nbsp;·&nbsp; Hybrid</span>
+        </span>
+        <span class="exp-aside"><span class="exp-date">Jul 2023 – Apr 2025</span><span class="exp-toggle">▾</span></span>
       </button>
       <div class="exp-body">
         <p class="exp-summary">Managed identity, endpoint, and security operations for a fintech company. Led compliance initiatives and consolidated vendor spend.</p>
@@ -350,12 +386,12 @@
     </div>
 
     <div class="exp-card">
-      <button class="exp-btn" onclick="toggleExp(this)">
-        <div class="exp-meta">
-          <div class="exp-role">Service Desk Technician</div>
-          <div class="exp-company">Groups360 &nbsp;·&nbsp; Brentwood, TN &nbsp;·&nbsp; On-Site</div>
-        </div>
-        <div class="exp-aside"><div class="exp-date">Aug 2022 – Jul 2023</div><span class="exp-toggle">▾</span></div>
+      <button type="button" class="exp-btn" aria-expanded="false" onclick="toggleExp(this)">
+        <span class="exp-meta">
+          <span class="exp-role">Service Desk Technician</span>
+          <span class="exp-company">Groups360 &nbsp;·&nbsp; Brentwood, TN &nbsp;·&nbsp; On-Site</span>
+        </span>
+        <span class="exp-aside"><span class="exp-date">Aug 2022 – Jul 2023</span><span class="exp-toggle">▾</span></span>
       </button>
       <div class="exp-body">
         <p class="exp-summary">Tier 1 and 2 support covering identity, endpoint, and networking. Consistently met SLAs while taking on IAM automation work.</p>
@@ -369,12 +405,12 @@
     </div>
 
     <div class="exp-card">
-      <button class="exp-btn" onclick="toggleExp(this)">
-        <div class="exp-meta">
-          <div class="exp-role">Earlier Career</div>
-          <div class="exp-company">Asurion &nbsp;·&nbsp; Best Buy / Geek Squad</div>
-        </div>
-        <div class="exp-aside"><div class="exp-date">Oct 2017 – Aug 2022</div><span class="exp-toggle">▾</span></div>
+      <button type="button" class="exp-btn" aria-expanded="false" onclick="toggleExp(this)">
+        <span class="exp-meta">
+          <span class="exp-role">Earlier Career</span>
+          <span class="exp-company">Asurion &nbsp;·&nbsp; Best Buy / Geek Squad</span>
+        </span>
+        <span class="exp-aside"><span class="exp-date">Oct 2017 – Aug 2022</span><span class="exp-toggle">▾</span></span>
       </button>
       <div class="exp-body">
         <p class="exp-summary">Hands-on hardware and software repair across consumer and enterprise environments. Foundation for everything that came after.</p>
@@ -393,6 +429,66 @@
 <section id="projects" class="section">
   <p class="section-kicker">Work</p>
   <h2 class="section-title">Projects</h2>
+
+  <p class="proj-sub">What I own</p>
+  <div class="owned-grid">
+
+    <div class="owned-card wide">
+      <h3>Atlassian build-out on Government Cloud</h3>
+      <p>I stood up Jira, Jira Service Management, and Confluence on Atlassian Government Cloud (FedRAMP Moderate) and moved the company onto it. About 20 teams so far, most coming off Linear and Notion. Our tenant runs without marketplace apps or AI features, so everything is native config, Automation, and the REST API. The pieces I'm proudest of:</p>
+      <ul>
+        <li><strong>Change request process.</strong> One path for every system change at the company. Four change types (Standard, Normal Minor, Normal Major, Emergency), a director review gate and a GRC review gate, the who/what/why and risk on every request, a test plan and change window, and a change calendar dashboard. Security runs a copy of the same process.</li>
+        <li><strong>Application review and onboarding.</strong> App access and app change request forms with a section per app, so the requester only sees the questions for what they picked. Requests route to GRC and then Security depending on how risky the app is. A one-click onboarding automation opens the security hardening task and drops a 12-step checklist into the ticket.</li>
+        <li><strong>Other teams' processes.</strong> Intake and workflows for Security, GRC, Finance, Legal, Infrastructure, People Ops, Sales, Business Ops, and Product &amp; Engineering, plus an international travel flow for the security office with a work-abroad gate. I wrote a buildout script that turns a manifest into a fully configured project, so a new team takes hours, not weeks.</li>
+      </ul>
+    </div>
+
+    <div class="owned-card">
+      <h3>RBAC process and policy</h3>
+      <p>I proposed the access model we run on now. Access comes from Okta groups and roles tied to your team and job, not one-off grants. Changes go through a request and approval, including a change request for creating or changing security groups and distribution lists.</p>
+    </div>
+
+    <div class="owned-card">
+      <h3>GitHub identity and access</h3>
+      <p>SSO and SCIM from Okta into GitHub Enterprise Server, with Okta groups pushed as GitHub teams. Self-service access requests for the restricted org and the SME groups, GitHub-specific questions on the app request forms, and the how-to docs for all of it.</p>
+    </div>
+
+  </div>
+
+  <p class="also-line"><strong>Also built in Jira:</strong> approval reminders that escalate and then cancel stale requests, assignee escalation, after-hours notices, approvers and devices auto-filled from Assets, a USB drive request with a security approval gate, a weekly and monthly metrics post in Slack for leadership, dashboards and SLAs, and a lot of cleanup on screens, workflows, and permission schemes.<br/><strong>Also in Okta:</strong> Navan SSO and SCIM, managed device required on every CMMC app, an inactive-account suspension flow, offboarding cleanup flows, and the passwordless rollout plan.</p>
+
+  <p class="proj-sub">Things I built or helped build</p>
+  <div class="proj-grid" style="margin-bottom: 2rem;">
+
+    <div class="proj-card">
+      <div class="proj-name">Slack ↔ Jira bridge for gov cloud</div>
+      <p class="proj-credit">Co-built with a teammate</p>
+      <p class="proj-desc">The usual Slack integrations aren't available to us on Atlassian Government Cloud, so we built our own on GCP. A message in a help channel becomes a ticket, replies sync both ways as the real person, and agents assign, change status, and leave notes from a card in Slack. I led the rollout to five team channels: IT, Security, GRC, Finance, and Infrastructure.</p>
+      <div class="proj-pills"><span class="proj-pill">Slack API</span><span class="proj-pill">JSM</span><span class="proj-pill">Cloud Run</span><span class="proj-pill">Cloud Tasks</span><span class="proj-pill">Firestore</span><span class="proj-pill">TypeScript</span></div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-name">Okta answers in Slack</div>
+      <p class="proj-credit">I owned GCP and the Slack app; a teammate wrote the core</p>
+      <p class="proj-desc">A Slack bot that answers Okta questions and previews what someone would gain or lose if their department or title changed, using its own evaluator for Okta group rules. I set up the GCP project, the Slack app, deploys and alerting, and shipped the reliability and hardening work: retries, rate limits, safe output, and long answers as CSVs.</p>
+      <div class="proj-pills"><span class="proj-pill">Okta API</span><span class="proj-pill">Vertex AI</span><span class="proj-pill">Cloud Run</span><span class="proj-pill">Slack Block Kit</span><span class="proj-pill">TypeScript</span></div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-name">Notion → Confluence migration kit</div>
+      <p class="proj-desc">A repeatable kit that moves Notion pages, trees, and database hubs into gov-cloud Confluence: images, attachments, child pages, and the links between them. Used it to move the IT knowledge base and several teams' docs without hand-copying.</p>
+      <div class="proj-pills"><span class="proj-pill">Python</span><span class="proj-pill">Notion API</span><span class="proj-pill">Confluence API</span></div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-name">AI cost governance</div>
+      <p class="proj-desc">Put every team's AI API usage behind a self-hosted gateway with SCIM, RBAC, budgets, and an approved model list. Wrote the key request process and trained the help desk and systems engineers on issuing keys.</p>
+      <div class="proj-pills"><span class="proj-pill">AI gateway</span><span class="proj-pill">SCIM</span><span class="proj-pill">RBAC</span><span class="proj-pill">CMMC</span></div>
+    </div>
+
+  </div>
+
+  <p class="proj-sub">Earlier projects</p>
   <div class="proj-grid">
 
     <div class="proj-card">
@@ -471,7 +567,7 @@
       </div>
       <div class="cert-right">
         <span class="cert-badge earned">Earned</span>
-        <a href="https://www.credly.com/users/jesse-dean.7c10e070" target="_blank" class="cert-link">View ↗</a>
+        <a href="https://www.credly.com/users/jesse-dean.7c10e070" target="_blank" rel="noopener" class="cert-link">View ↗</a>
       </div>
     </div>
 
@@ -482,7 +578,7 @@
       </div>
       <div class="cert-right">
         <span class="cert-badge earned">Earned</span>
-        <a href="https://www.credly.com/users/jesse-dean.7c10e070" target="_blank" class="cert-link">View ↗</a>
+        <a href="https://www.credly.com/users/jesse-dean.7c10e070" target="_blank" rel="noopener" class="cert-link">View ↗</a>
       </div>
     </div>
 
@@ -493,7 +589,7 @@
       </div>
       <div class="cert-right">
         <span class="cert-badge earned">Earned</span>
-        <a href="https://www.credly.com/users/jesse-dean.7c10e070" target="_blank" class="cert-link">View ↗</a>
+        <a href="https://www.credly.com/users/jesse-dean.7c10e070" target="_blank" rel="noopener" class="cert-link">View ↗</a>
       </div>
     </div>
 
@@ -509,25 +605,25 @@
   <div class="connect-grid">
     <form class="contact-form" onsubmit="sendMsg(event)">
       <div class="form-row">
-        <input type="text" id="cf-name" placeholder="Your name" required />
-        <input type="email" id="cf-email" placeholder="Your email" required />
+        <label for="cf-name" class="sr-only">Your name</label><input type="text" id="cf-name" placeholder="Your name" autocomplete="name" required />
+        <label for="cf-email" class="sr-only">Your email</label><input type="email" id="cf-email" placeholder="Your email" autocomplete="email" required />
       </div>
-      <input type="text" id="cf-subject" placeholder="Subject" required />
-      <textarea id="cf-message" placeholder="Your message" rows="5" required></textarea>
+      <label for="cf-subject" class="sr-only">Subject</label><input type="text" id="cf-subject" placeholder="Subject" required />
+      <label for="cf-message" class="sr-only">Your message</label><textarea id="cf-message" placeholder="Your message" rows="5" required></textarea>
       <button type="submit" class="form-btn">Send message ↗</button>
-      <p class="form-note" id="form-status"></p>
+      <p class="form-note" id="form-status" role="status" aria-live="polite"></p>
     </form>
 
     <div class="connect-links">
-      <a href="https://www.linkedin.com/in/jesse-dean-ii/" target="_blank" class="connect-row">
+      <a href="https://www.linkedin.com/in/jesse-dean-ii/" target="_blank" rel="noopener" class="connect-row">
         <div class="connect-left"><span class="connect-type">LinkedIn</span><span class="connect-val">/in/jesse-dean-ii</span></div>
         <span class="connect-arrow">↗</span>
       </a>
-      <a href="https://github.com/Jessunny" target="_blank" class="connect-row">
+      <a href="https://github.com/Jessunny" target="_blank" rel="noopener" class="connect-row">
         <div class="connect-left"><span class="connect-type">GitHub</span><span class="connect-val">/Jessunny</span></div>
         <span class="connect-arrow">↗</span>
       </a>
-      <a href="https://www.credly.com/users/jesse-dean.7c10e070" target="_blank" class="connect-row">
+      <a href="https://www.credly.com/users/jesse-dean.7c10e070" target="_blank" rel="noopener" class="connect-row">
         <div class="connect-left"><span class="connect-type">Credly</span><span class="connect-val">jesse-dean credentials</span></div>
         <span class="connect-arrow">↗</span>
       </a>
@@ -541,8 +637,8 @@
 </footer>
 
 <script>
-  function toggleExp(btn) { btn.closest('.exp-card').classList.toggle('open'); }
-  function toggleAbout(btn) { btn.closest('.about-card').classList.toggle('open'); }
+  function toggleExp(btn) { btn.setAttribute('aria-expanded', btn.closest('.exp-card').classList.toggle('open')); }
+  function toggleAbout(btn) { btn.setAttribute('aria-expanded', btn.closest('.about-card').classList.toggle('open')); }
 
   async function sendMsg(e) {
     e.preventDefault();
