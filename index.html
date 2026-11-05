@@ -468,6 +468,12 @@
     </div>
 
     <div class="proj-card">
+      <div class="proj-name">Automated compliance evidence</div>
+      <p class="proj-desc">Auditors ask for the same Jira records every cycle: change requests, security incidents, removable-media requests. Scheduled Okta Workflows now pull them, turn each ticket into a readable CSV row (description, every comment, full status history as the approval trail), attach it to the matching evidence record in our GRC platform, and set the next due date. Monthly for changes and incidents, quarterly for media. Every run checks its own work: it confirms it can see each Jira space, compares the ticket count to the rows uploaded, and posts the result or the failure to Slack. That replaced a manual export, clean up, and attach job.</p>
+      <div class="proj-pills"><span class="proj-pill">Okta Workflows</span><span class="proj-pill">Jira API</span><span class="proj-pill">RegScale</span><span class="proj-pill">SOC 2</span><span class="proj-pill">CMMC</span><span class="proj-pill">Python</span></div>
+    </div>
+
+    <div class="proj-card">
       <div class="proj-name">Okta answers in Slack</div>
       <p class="proj-credit">I owned GCP and the Slack app; a teammate wrote the core</p>
       <p class="proj-desc">A Slack bot that answers Okta questions and previews what someone would gain or lose if their department or title changed, using its own evaluator for Okta group rules. I set up the GCP project, the Slack app, deploys and alerting, and shipped the reliability and hardening work: retries, rate limits, safe output, and long answers as CSVs.</p>
