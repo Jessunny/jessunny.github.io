@@ -1,6 +1,6 @@
 # Jesse Dean II — Portfolio
 
-Personal portfolio site for Jesse Dean II, IT Systems Engineer based in Nashville, TN. Built with plain HTML and CSS — no frameworks, no dependencies, no build step.
+Personal portfolio site for Jesse Dean II, Corporate Systems Engineer based in Nashville, TN. Built with plain HTML and CSS — no frameworks, no dependencies, no build step.
 
 **Status:** private while I review it. Once it's public it will be at [jessunny.github.io](https://jessunny.github.io).
 
@@ -10,8 +10,8 @@ Personal portfolio site for Jesse Dean II, IT Systems Engineer based in Nashvill
 
 - **About** — Background, skills, and tech stack organized by category
 - **Experience** — Expandable accordion cards for each role with summaries and key accomplishments
-- **Projects** — what I own (Atlassian build-out, RBAC, GitHub identity), things I built, and earlier projects
-- **Certifications** — Earned certs with links to Credly
+- **Projects** — what I own (Atlassian platform, the Okta access model, GitHub identity), things I built or helped build, and earlier projects
+- **Certifications** — Earned certs with links to Credly, plus the ones in progress
 - **Connect** — Contact form powered by Formspree (email stays private) + links to LinkedIn, GitHub, and Credly
 
 ---

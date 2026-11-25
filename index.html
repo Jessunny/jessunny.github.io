@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Jesse Dean II — IT Systems Engineer</title>
-<meta name="description" content="Jesse Dean II, IT Systems Engineer in Nashville. Identity, Atlassian, and automation work: Okta, Jira Service Management on Government Cloud, Slack apps on GCP."/>
-<meta property="og:title" content="Jesse Dean II — IT Systems Engineer"/>
-<meta property="og:description" content="Identity, Atlassian, and automation work in FedRAMP and CMMC environments."/>
+<title>Jesse Dean II — Corporate Systems Engineer</title>
+<meta name="description" content="Jesse Dean II, Corporate Systems Engineer in Nashville. Identity, access, and ITSM work: Okta, Jira and Jira Service Management on Atlassian Government Cloud, and automation on Google Cloud."/>
+<meta property="og:title" content="Jesse Dean II — Corporate Systems Engineer"/>
+<meta property="og:description" content="Identity, access, and ITSM work in a FedRAMP and CMMC environment."/>
 <meta property="og:type" content="website"/>
 <meta name="theme-color" content="#0d1117"/>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d1117'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%2358a6ff' text-anchor='middle'%3EJD%3C/text%3E%3C/svg%3E"/>
@@ -71,6 +71,7 @@
   .about-accordions { display: flex; flex-direction: column; gap: 0.55rem; margin-bottom: 2.5rem; }
   .about-card { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: border-color 0.15s; }
   .about-card:hover { border-color: var(--border2); }
+  .about-trigger, .exp-btn { font: inherit; color: inherit; }
   .about-trigger { width: 100%; background: none; border: none; cursor: pointer; padding: 1rem 1.3rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; text-align: left; }
   .about-trigger:hover { background: var(--bg2); }
   .block, .about-trigger-title, .about-trigger-sub, .exp-meta, .exp-role, .exp-company, .exp-date { display: block; }
@@ -136,6 +137,7 @@
   .cert-right { display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0; }
   .cert-badge { font-size: 0.68rem; font-weight: 600; padding: 0.2rem 0.55rem; border-radius: 5px; white-space: nowrap; }
   .cert-badge.earned { background: rgba(63,185,80,0.15); color: var(--green); border: 1px solid rgba(63,185,80,0.3); }
+  .cert-badge.progress { background: var(--pill); color: var(--text2); border: 1px solid var(--border); }
   .cert-link { font-size: 0.75rem; color: var(--text3); }
   .cert-link:hover { color: var(--accent); }
 
@@ -233,8 +235,8 @@
 <div id="home">
   <p class="hero-location"><span class="hero-dot"></span> Nashville, TN</p>
   <h1 class="hero-name">Jesse Dean II</h1>
-  <p class="hero-role">IT Support &amp; Systems Engineer</p>
-  <p class="hero-desc">I work on identity, access, and the systems teams use every day. Right now that's inside FedRAMP and CMMC boundaries, where a lot of the usual tools aren't allowed, so I build what's missing: the company's Jira and Confluence on Atlassian Government Cloud, the access model in Okta, and, with my teammates, the Slack apps that tie them together.</p>
+  <p class="hero-role">Corporate Systems Engineer</p>
+  <p class="hero-desc">I work on identity, access, and the systems teams use every day. Right now that's inside FedRAMP and CMMC boundaries, where a lot of the usual tools aren't allowed, so I build what's missing. I own Okta identity automation and the Atlassian platform at my company, and I co-built the Slack service that turns help requests into Jira tickets.</p>
   <div class="hero-btns">
     <a href="#connect" class="cta">Get in touch</a>
     <a href="https://www.linkedin.com/in/jesse-dean-ii/" target="_blank" rel="noopener">LinkedIn ↗</a>
@@ -253,31 +255,31 @@
     <div class="about-card">
       <button type="button" class="about-trigger" aria-expanded="false" onclick="toggleAbout(this)">
         <span class="about-trigger-left">
-          <span class="about-trigger-icon">💼</span>
+          <span class="about-trigger-icon" aria-hidden="true">💼</span>
           <span class="block">
             <span class="about-trigger-title">Professional Background</span>
             <span class="about-trigger-sub">Career, skills &amp; what I work on</span>
           </span>
         </span>
-        <span class="about-chevron">▾</span>
+        <span class="about-chevron" aria-hidden="true">▾</span>
       </button>
       <div class="about-body">
-        <p>I'm an IT Support and Systems Engineer based in Nashville, TN. I started fixing hardware at Geek Squad and worked my way up to owning identity and access for whole companies. I've spent years building systems that actually hold up: Okta lifecycle automation, MDM deployments, HRIS integrations, and org-wide Jira infrastructure.</p>
+        <p>I'm a Corporate Systems Engineer based in Nashville, TN. I started fixing hardware at Geek Squad and worked up through Tier 1 to Tier 3 support into identity and access work. Most of what I build is Okta lifecycle automation, HRIS integrations, and Jira setups that still make sense after I hand them off.</p>
         <p>I take full ownership of what I build and make sure it's practical, secure, and easy for teams to maintain. I work closely with Security, HR, and Engineering, because most access problems start outside IT. I also like walking Service Desk teammates through the hard tickets and writing down how we fixed them.</p>
-        <p>Currently at Onebrief, a remote-first defense-tech company. I own the Atlassian platform there, wrote the RBAC model we run access on, and build the integrations that hold our identity, ticketing, and Slack together.</p>
+        <p>Currently at Onebrief, working remote. I own Okta identity automation and the Atlassian platform there, helped write the access policies we run on, and build the integrations between identity, ticketing, and Slack.</p>
       </div>
     </div>
 
     <div class="about-card">
       <button type="button" class="about-trigger" aria-expanded="false" onclick="toggleAbout(this)">
         <span class="about-trigger-left">
-          <span class="about-trigger-icon">🏕️</span>
+          <span class="about-trigger-icon" aria-hidden="true">🏕️</span>
           <span class="block">
             <span class="about-trigger-title">Personal Life</span>
             <span class="about-trigger-sub">Outside of work &amp; hobbies</span>
           </span>
         </span>
-        <span class="about-chevron">▾</span>
+        <span class="about-chevron" aria-hidden="true">▾</span>
       </button>
       <div class="about-body">
         <p>When I'm not at a keyboard, you'll most likely find me outside. Camping is one of my favorite ways to unwind. There's something about getting off the grid for a weekend, whether it's a tent in the woods or a fire pit somewhere in Tennessee, that just resets everything.</p>
@@ -291,25 +293,25 @@
     <div>
       <div class="skill-block">
         <div class="skill-label">Identity &amp; Access</div>
-        <div class="pills"><span class="pill">Okta</span><span class="pill">Entra ID</span><span class="pill">SSO</span><span class="pill">SCIM</span><span class="pill">SAML 2.0</span><span class="pill">RBAC</span><span class="pill">PAM</span></div>
+        <div class="pills"><span class="pill">Okta</span><span class="pill">Entra ID</span><span class="pill">SSO</span><span class="pill">SCIM</span><span class="pill">SAML 2.0</span><span class="pill">RBAC</span><span class="pill">MFA</span><span class="pill">PAM</span></div>
       </div>
       <div class="skill-block">
         <div class="skill-label">Endpoint &amp; MDM</div>
-        <div class="pills"><span class="pill">Kandji</span><span class="pill">Intune</span><span class="pill">JamF</span><span class="pill">macOS</span><span class="pill">Windows</span></div>
+        <div class="pills"><span class="pill">Kandji</span><span class="pill">Intune</span><span class="pill">Jamf</span><span class="pill">macOS</span><span class="pill">Windows</span></div>
       </div>
       <div class="skill-block">
         <div class="skill-label">Cloud &amp; Infrastructure</div>
-        <div class="pills"><span class="pill">GCP</span><span class="pill">Cloud Run</span><span class="pill">Cloud Build</span><span class="pill">Azure</span><span class="pill">AWS</span><span class="pill">Terraform</span><span class="pill">DNS</span><span class="pill">VPN</span></div>
+        <div class="pills"><span class="pill">GCP</span><span class="pill">Cloud Run</span><span class="pill">Cloud Build</span><span class="pill">Azure</span><span class="pill">AWS</span><span class="pill">Microsoft 365 GCC</span><span class="pill">Terraform</span><span class="pill">DNS</span><span class="pill">VPN</span></div>
       </div>
     </div>
     <div>
       <div class="skill-block">
         <div class="skill-label">Automation &amp; Dev</div>
-        <div class="pills"><span class="pill">Python</span><span class="pill">PowerShell</span><span class="pill">Bash</span><span class="pill">Node / TypeScript</span><span class="pill">Okta Workflows</span><span class="pill">Jira Automation</span><span class="pill">Slack apps</span><span class="pill">n8n</span><span class="pill">REST APIs</span></div>
+        <div class="pills"><span class="pill">Python</span><span class="pill">PowerShell</span><span class="pill">SQL</span><span class="pill">Bash</span><span class="pill">Node / TypeScript</span><span class="pill">Okta Workflows</span><span class="pill">Jira Automation</span><span class="pill">Slack apps</span><span class="pill">n8n</span><span class="pill">REST APIs</span><span class="pill">Git</span></div>
       </div>
       <div class="skill-block">
         <div class="skill-label">ITSM &amp; Security</div>
-        <div class="pills"><span class="pill">Jira</span><span class="pill">JSM</span><span class="pill">Confluence</span><span class="pill">Atlassian Gov Cloud</span><span class="pill">Jira Assets</span><span class="pill">CrowdStrike</span><span class="pill">MS Defender</span><span class="pill">Drata</span><span class="pill">Tenable</span><span class="pill">SIEM</span><span class="pill">EDR</span></div>
+        <div class="pills"><span class="pill">Jira</span><span class="pill">JSM</span><span class="pill">Confluence</span><span class="pill">Atlassian Gov Cloud</span><span class="pill">Jira Assets</span><span class="pill">CrowdStrike</span><span class="pill">MS Defender</span><span class="pill">RegScale</span><span class="pill">Drata</span><span class="pill">Tenable</span><span class="pill">SIEM</span><span class="pill">EDR</span></div>
       </div>
     </div>
   </div>
@@ -324,23 +326,45 @@
     <div class="exp-card">
       <button type="button" class="exp-btn" aria-expanded="false" onclick="toggleExp(this)">
         <span class="exp-meta">
-          <span class="exp-role">IT Support Engineer</span>
+          <span class="exp-role">Corporate Systems Engineer</span>
           <span class="exp-company">Onebrief &nbsp;·&nbsp; Remote</span>
         </span>
-        <span class="exp-aside"><span class="exp-date">Dec 2025 – Present</span><span class="exp-toggle">▾</span></span>
+        <span class="exp-aside"><span class="exp-date">Jul 2026 – Present</span><span class="exp-toggle" aria-hidden="true">▾</span></span>
       </button>
       <div class="exp-body">
-        <p class="exp-summary">L1–L3 support at a defense-tech startup, plus ownership of the Atlassian platform, the Okta access model, and a GCC compliance migration. Close to 1,000 tickets closed this year.</p>
+        <p class="exp-summary">I own Okta identity automation and the Atlassian platform at a company that handles CUI. The environment is FedRAMP and CMMC Level 2: Atlassian Government Cloud and Microsoft 365 GCC.</p>
         <ul class="exp-ul">
-          <li>Owned the Atlassian build-out on Government Cloud: Jira, JSM, and Confluence for about 20 teams, most of them moved off Linear and Notion. Cut ticketing issues 60–70%.</li>
-          <li>Built the company-wide change request process in Jira: four change types, director and GRC review gates, test plans and change windows, and a change calendar.</li>
-          <li>Built application review and onboarding in Jira: per-app request forms, risk-based routing to GRC and Security, and a one-click onboarding checklist.</li>
-          <li>Proposed the RBAC process and policy: access through Okta groups and roles, changes through request and approval.</li>
-          <li>Set up SSO and SCIM from Okta into GitHub Enterprise Server, with team access driven by Okta groups.</li>
-          <li>Co-built a Slack ↔ Jira bridge on GCP for gov cloud and rolled it out to five team help channels.</li>
-          <li>Managed Okta lifecycle workflows for onboarding, offboarding, and access changes. Reduced manual access work 60–75%.</li>
-          <li>Managed SCIM provisioning, SSO, and SAML 2.0 across 150+ SaaS applications, and required managed devices on every CMMC app's auth policy.</li>
-          <li>Led M365 tenant migration from Commercial to GCC including RBAC, Conditional Access, and security controls.</li>
+          <li>Helped write the IAM policies and the Okta group naming convention. Access now comes from role-based groups driven by HR attributes.</li>
+          <li>Built the Re-Org Tool, a Python tool on the Okta API that put that model in place during a company re-org: 69 RBAC groups across 12 departments, 1,000+ group assignments, and the Okta Expression Language group rules. It is reusable for the next re-org.</li>
+          <li>Rolled out Okta Access Requests for self-service app access. App access requests to IT are down 76% in the two months since launch.</li>
+          <li>Own the GitHub IAM build-out in Okta, including the team and role groups that control GitHub access.</li>
+          <li>Built custom SCIM-style connections with Okta Workflows and vendor APIs, so apps without SCIM support, such as SAML-only apps, are deprovisioned automatically at offboarding.</li>
+          <li>Built Okta Workflows for onboarding and offboarding, Okta group to Slack channel sync, and monthly compliance exports from Jira to RegScale. Help manage a tenant of 230+ flows.</li>
+          <li>Own Jira, Jira Service Management, Confluence, and Assets across 23 projects: intake, workflows, and request types for Engineering, Legal, Finance, Infrastructure, and Security, Okta-to-Jira integrations that open onboarding and offboarding tickets automatically, and asset management for company hardware.</li>
+          <li>Designed and launched the company-wide change management process in Jira, with Director and GRC review gates.</li>
+          <li>Co-built a Slack-to-Jira Service Management intake service on Google Cloud with a teammate. It is live for five teams.</li>
+          <li>Built and deployed Sitrep, a reporting dashboard hosted on Google Cloud that gives each team charts and written summaries of the work in its Jira space.</li>
+          <li>Found and deactivated $367K of stray SaaS spend on duplicate applications during a SaaS consolidation effort.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <button type="button" class="exp-btn" aria-expanded="false" onclick="toggleExp(this)">
+        <span class="exp-meta">
+          <span class="exp-role">IT Support Specialist</span>
+          <span class="exp-company">Onebrief &nbsp;·&nbsp; Remote</span>
+        </span>
+        <span class="exp-aside"><span class="exp-date">Dec 2025 – Jul 2026</span><span class="exp-toggle" aria-hidden="true">▾</span></span>
+      </button>
+      <div class="exp-body">
+        <p class="exp-summary">Started in support and took on the Okta lifecycle work, the Jira rollout, and a share of two team projects: an acquisition integration and the move to Microsoft 365 GCC.</p>
+        <ul class="exp-ul">
+          <li>Worked with the IT team to integrate an acquired company: brought its staff into Okta and core applications, enrolled its devices in device management, and migrated its tenant data into our environments.</li>
+          <li>Owned Okta lifecycle workflows for onboarding, offboarding, and access changes. Reduced manual access work 60–75% and improved audit readiness.</li>
+          <li>Owned Okta integrations with SaaS applications: SCIM provisioning, SSO, and SAML 2.0 across 150+ applications.</li>
+          <li>Led the Jira rollout across the organization with least-privilege access controls. Reduced issues from the previous ticketing systems 60–70%.</li>
+          <li>Co-led the Microsoft 365 tenant migration from Commercial to GCC with the IT team: security controls, RBAC assignments, and conditional access policies to meet government cloud requirements.</li>
         </ul>
       </div>
     </div>
@@ -351,13 +375,14 @@
           <span class="exp-role">Sr. IT Support Engineer</span>
           <span class="exp-company">Built Technologies &nbsp;·&nbsp; Nashville, TN &nbsp;·&nbsp; Hybrid</span>
         </span>
-        <span class="exp-aside"><span class="exp-date">Apr 2025 – Nov 2025</span><span class="exp-toggle">▾</span></span>
+        <span class="exp-aside"><span class="exp-date">Apr 2025 – Nov 2025</span><span class="exp-toggle" aria-hidden="true">▾</span></span>
       </button>
       <div class="exp-body">
         <p class="exp-summary">Senior engineer supporting identity, endpoint, and SaaS operations across a 300+ application environment.</p>
         <ul class="exp-ul">
-          <li>Assisted Okta lifecycle workflows, reducing manual access work 40–50%.</li>
-          <li>Managed Jira Service Management, standardizing workflows and centralizing team operations.</li>
+          <li>Integrated HRIS data with Okta using custom attributes and lifecycle rules. Reduced identity discrepancies and access errors 30–40%.</li>
+          <li>Supported SSO and SCIM integrations and assisted with Okta lifecycle workflows, reducing manual access work 40–50%.</li>
+          <li>Owned the Atlassian tools and Jira Service Management: standardized workflows and consolidated automation.</li>
           <li>Led endpoint management across Kandji and Intune with automated compliance baselines.</li>
           <li>Built API integrations connecting Atlassian, Entra ID, Okta, and Salesforce.</li>
           <li>Built GPT-based Python automations across IT, HR, Finance, Sales, and Product. Reduced manual effort 30%.</li>
@@ -371,16 +396,16 @@
           <span class="exp-role">Systems Administrator</span>
           <span class="exp-company">Strategycorps &nbsp;·&nbsp; Brentwood, TN &nbsp;·&nbsp; Hybrid</span>
         </span>
-        <span class="exp-aside"><span class="exp-date">Jul 2023 – Apr 2025</span><span class="exp-toggle">▾</span></span>
+        <span class="exp-aside"><span class="exp-date">Jul 2023 – Apr 2025</span><span class="exp-toggle" aria-hidden="true">▾</span></span>
       </button>
       <div class="exp-body">
         <p class="exp-summary">Managed identity, endpoint, and security operations for a fintech company. Led compliance initiatives and consolidated vendor spend.</p>
         <ul class="exp-ul">
           <li>Automated access requests and audit workflows via Entra ID and PAM. Reduced manual reviews by 60% and cut provisioning from hours to minutes.</li>
           <li>Built phishing simulation program integrated with Exchange Online, reducing incidents 45%.</li>
-          <li>Audited and consolidated M365 licensing and vendor contracts, saving ~$23K annually.</li>
-          <li>Led SOC 2 and PCI compliance work including remediation, audit support, and control documentation.</li>
-          <li>Built Conditional Access policies enforcing passwordless MFA and risk-based authentication.</li>
+          <li>Migrated device management from Mosyle to Kandji and consolidated Microsoft 365 licensing and vendor contracts, saving about $23K a year.</li>
+          <li>Led SOC 2, PCI, and penetration testing efforts: remediating findings, supporting audits, and documenting controls.</li>
+          <li>Built Conditional Access policies enforcing passwordless MFA, compliant device access, and risk-based authentication.</li>
         </ul>
       </div>
     </div>
@@ -391,15 +416,15 @@
           <span class="exp-role">Service Desk Technician</span>
           <span class="exp-company">Groups360 &nbsp;·&nbsp; Brentwood, TN &nbsp;·&nbsp; On-Site</span>
         </span>
-        <span class="exp-aside"><span class="exp-date">Aug 2022 – Jul 2023</span><span class="exp-toggle">▾</span></span>
+        <span class="exp-aside"><span class="exp-date">Aug 2022 – Jul 2023</span><span class="exp-toggle" aria-hidden="true">▾</span></span>
       </button>
       <div class="exp-body">
-        <p class="exp-summary">Tier 1 and 2 support covering identity, endpoint, and networking. Consistently met SLAs while taking on IAM automation work.</p>
+        <p class="exp-summary">Tier 1 and Tier 2 support within SLAs, while taking on Okta automation and endpoint management.</p>
         <ul class="exp-ul">
           <li>Built Okta onboarding automation that cut new-hire setup time by 30%.</li>
           <li>Managed Kandji and Intune for endpoint management and compliance enforcement.</li>
           <li>Implemented Azure Virtual Desktop for secure distributed team access.</li>
-          <li>Built hardware lifecycle processes in Jira ITAM, improving asset tracking across teams.</li>
+          <li>Built hardware lifecycle processes in Jira ITAM, and wrote knowledge base articles and SOPs that reduced repeat tickets.</li>
         </ul>
       </div>
     </div>
@@ -410,7 +435,7 @@
           <span class="exp-role">Earlier Career</span>
           <span class="exp-company">Asurion &nbsp;·&nbsp; Best Buy / Geek Squad</span>
         </span>
-        <span class="exp-aside"><span class="exp-date">Oct 2017 – Aug 2022</span><span class="exp-toggle">▾</span></span>
+        <span class="exp-aside"><span class="exp-date">Oct 2017 – Aug 2022</span><span class="exp-toggle" aria-hidden="true">▾</span></span>
       </button>
       <div class="exp-body">
         <p class="exp-summary">Hands-on hardware and software repair across consumer and enterprise environments. Foundation for everything that came after.</p>
@@ -434,62 +459,82 @@
   <div class="owned-grid">
 
     <div class="owned-card wide">
-      <h3>Atlassian build-out on Government Cloud</h3>
-      <p>I stood up Jira, Jira Service Management, and Confluence on Atlassian Government Cloud (FedRAMP Moderate) and moved the company onto it. About 20 teams so far, most coming off Linear and Notion. Our tenant runs without marketplace apps or AI features, so everything is native config, Automation, and the REST API. The pieces I'm proudest of:</p>
+      <h3>Atlassian platform on Government Cloud</h3>
+      <p>I led the Jira rollout and now own Jira, Jira Service Management, Confluence, and Assets on Atlassian Government Cloud, across 23 projects. Our tenant runs without marketplace apps, so everything is native config, Automation, and the REST API. The main pieces:</p>
       <ul>
-        <li><strong>Change request process.</strong> One path for every system change at the company. Four change types (Standard, Normal Minor, Normal Major, Emergency), a director review gate and a GRC review gate, the who/what/why and risk on every request, a test plan and change window, and a change calendar dashboard. Security runs a copy of the same process.</li>
+        <li><strong>Change management process.</strong> I designed and launched one path for every system change at the company. Each request carries its scope, the why and the risk, who is affected, a test plan, and a change window, and it passes Director and GRC review gates before anything ships.</li>
         <li><strong>Application review and onboarding.</strong> App access and app change request forms with a section per app, so the requester only sees the questions for what they picked. Requests route to GRC and then Security depending on how risky the app is. A one-click onboarding automation opens the security hardening task and drops a 12-step checklist into the ticket.</li>
-        <li><strong>Other teams' processes.</strong> Intake and workflows for Security, GRC, Finance, Legal, Infrastructure, People Ops, Sales, Business Ops, and Product &amp; Engineering, plus an international travel flow for the security office with a work-abroad gate. I wrote a buildout script that turns a manifest into a fully configured project, so a new team takes hours, not weeks.</li>
+        <li><strong>Other teams' processes.</strong> Intake, workflows, and request types for Engineering, Legal, Finance, Infrastructure, and Security, plus an international travel flow for the security office with a work-abroad gate. I wrote a buildout script that turns a manifest into a configured project, so a new team takes hours, not weeks.</li>
+        <li><strong>Identity and hardware.</strong> Okta-to-Jira integrations open the onboarding and offboarding tickets automatically, and company hardware is tracked in Assets.</li>
       </ul>
     </div>
 
     <div class="owned-card">
-      <h3>RBAC process and policy</h3>
-      <p>I proposed the access model we run on now. Access comes from Okta groups and roles tied to your team and job, not one-off grants. Changes go through a request and approval, including a change request for creating or changing security groups and distribution lists.</p>
+      <h3>Access model in Okta</h3>
+      <p>I helped write the IAM policies and the Okta group naming convention. Access comes from role-based groups driven by HR attributes, not one-off grants. I also rolled out Okta Access Requests for self-service app access. App access requests to IT are down 76% in the two months since launch.</p>
     </div>
 
     <div class="owned-card">
       <h3>GitHub identity and access</h3>
-      <p>SSO and SCIM from Okta into GitHub Enterprise Server, with Okta groups pushed as GitHub teams. Self-service access requests for the restricted org and the SME groups, GitHub-specific questions on the app request forms, and the how-to docs for all of it.</p>
+      <p>I own the GitHub IAM build-out in Okta: provisioning from Okta into GitHub, and the team and role groups that decide who gets access to what.</p>
     </div>
 
   </div>
 
-  <p class="also-line"><strong>Also built in Jira:</strong> approval reminders that escalate and then cancel stale requests, assignee escalation, after-hours notices, approvers and devices auto-filled from Assets, a USB drive request with a security approval gate, a weekly and monthly metrics post in Slack for leadership, dashboards and SLAs, and a lot of cleanup on screens, workflows, and permission schemes.<br/><strong>Also in Okta:</strong> Navan SSO and SCIM, managed device required on every CMMC app, an inactive-account suspension flow, offboarding cleanup flows, and the passwordless rollout plan.</p>
+  <p class="also-line"><strong>Also built in Jira:</strong> approval reminders that escalate and then cancel stale requests, assignee escalation, after-hours notices, approvers and devices auto-filled from Assets, a USB drive request with a security approval gate, a weekly and monthly metrics post in Slack for leadership, dashboards and SLAs, and a lot of cleanup on screens, workflows, and permission schemes.<br/><strong>Also in Okta:</strong> onboarding and offboarding flows, Okta group to Slack channel sync, Navan SSO and SCIM, the passwordless rollout plan, and helping manage a tenant of 230+ flows.</p>
 
   <p class="proj-sub">Things I built or helped build</p>
   <div class="proj-grid" style="margin-bottom: 2rem;">
 
     <div class="proj-card">
-      <div class="proj-name">Slack ↔ Jira bridge for gov cloud</div>
+      <div class="proj-name">Okta Re-Org Tool</div>
+      <p class="proj-desc">A Python tool on the Okta API that put our role-based access model in place during a company re-org. It created 69 RBAC groups across 12 departments, made 1,000+ group assignments, and wrote the Okta Expression Language group rules. It is reusable for the next re-org.</p>
+      <div class="proj-pills"><span class="proj-pill">Python</span><span class="proj-pill">Okta API</span><span class="proj-pill">Okta Expression Language</span><span class="proj-pill">RBAC</span></div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-name">Slack-to-Jira intake for gov cloud</div>
       <p class="proj-credit">Co-built with a teammate</p>
-      <p class="proj-desc">The usual Slack integrations aren't available to us on Atlassian Government Cloud, so we built our own on GCP. A message in a help channel becomes a ticket, replies sync both ways as the real person, and agents assign, change status, and leave notes from a card in Slack. I led the rollout to five team channels: IT, Security, GRC, Finance, and Infrastructure.</p>
+      <p class="proj-desc">The usual Slack integrations aren't available to us on Atlassian Government Cloud, so we built our own on Google Cloud. A message in a help channel becomes a ticket, replies sync both ways, and agents assign, change status, and leave notes from a card in Slack. It is live for five teams.</p>
       <div class="proj-pills"><span class="proj-pill">Slack API</span><span class="proj-pill">JSM</span><span class="proj-pill">Cloud Run</span><span class="proj-pill">Cloud Tasks</span><span class="proj-pill">Firestore</span><span class="proj-pill">TypeScript</span></div>
     </div>
 
     <div class="proj-card">
-      <div class="proj-name">Automated compliance evidence</div>
-      <p class="proj-desc">Auditors ask for the same Jira records every cycle: change requests, security incidents, removable-media requests. Scheduled Okta Workflows now pull them, turn each ticket into a readable CSV row (description, every comment, full status history as the approval trail), attach it to the matching evidence record in our GRC platform, and set the next due date. Monthly for changes and incidents, quarterly for media. Every run checks its own work: it confirms it can see each Jira space, compares the ticket count to the rows uploaded, and posts the result or the failure to Slack. That replaced a manual export, clean up, and attach job.</p>
-      <div class="proj-pills"><span class="proj-pill">Okta Workflows</span><span class="proj-pill">Jira API</span><span class="proj-pill">RegScale</span><span class="proj-pill">SOC 2</span><span class="proj-pill">CMMC</span><span class="proj-pill">Python</span></div>
+      <div class="proj-name">Deprovisioning for apps without SCIM</div>
+      <p class="proj-desc">Some apps only support SAML, so removing someone in Okta doesn't remove their account in the app. I built custom SCIM-style connections with Okta Workflows and the vendors' APIs, so those accounts are deprovisioned automatically at offboarding.</p>
+      <div class="proj-pills"><span class="proj-pill">Okta Workflows</span><span class="proj-pill">REST APIs</span><span class="proj-pill">Offboarding</span></div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-name">Sitrep</div>
+      <p class="proj-credit">Built and deployed on Google Cloud</p>
+      <p class="proj-desc">A reporting dashboard that gives each team charts and written summaries of the work in its Jira space. Hosted on Google Cloud.</p>
+      <div class="proj-pills"><span class="proj-pill">Jira</span><span class="proj-pill">Google Cloud</span><span class="proj-pill">Reporting</span></div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-name">SaaS consolidation</div>
+      <p class="proj-desc">During a SaaS consolidation effort I found duplicate applications and deactivated $367K of stray spend on them.</p>
+      <div class="proj-pills"><span class="proj-pill">SaaS management</span><span class="proj-pill">Licensing</span></div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-name">Automated compliance exports</div>
+      <p class="proj-desc">Auditors ask for the same Jira records every cycle. Scheduled Okta Workflows now export them from Jira to RegScale each month, so nobody has to pull, clean up, and attach them by hand.</p>
+      <div class="proj-pills"><span class="proj-pill">Okta Workflows</span><span class="proj-pill">Jira API</span><span class="proj-pill">RegScale</span><span class="proj-pill">CMMC</span></div>
     </div>
 
     <div class="proj-card">
       <div class="proj-name">Okta answers in Slack</div>
-      <p class="proj-credit">I owned GCP and the Slack app; a teammate wrote the core</p>
-      <p class="proj-desc">A Slack bot that answers Okta questions and previews what someone would gain or lose if their department or title changed, using its own evaluator for Okta group rules. I set up the GCP project, the Slack app, deploys and alerting, and shipped the reliability and hardening work: retries, rate limits, safe output, and long answers as CSVs.</p>
-      <div class="proj-pills"><span class="proj-pill">Okta API</span><span class="proj-pill">Vertex AI</span><span class="proj-pill">Cloud Run</span><span class="proj-pill">Slack Block Kit</span><span class="proj-pill">TypeScript</span></div>
+      <p class="proj-credit">Mostly a teammate's code; I owned the GCP project, the Slack app, and hardening</p>
+      <p class="proj-desc">A Slack bot that answered Okta questions and previewed what someone would gain or lose if their department or title changed. I set up the GCP project, the Slack app, deploys, and alerting, and shipped the reliability and hardening work.</p>
+      <div class="proj-pills"><span class="proj-pill">Okta API</span><span class="proj-pill">Cloud Run</span><span class="proj-pill">Slack Block Kit</span><span class="proj-pill">TypeScript</span></div>
     </div>
 
     <div class="proj-card">
       <div class="proj-name">Notion → Confluence migration kit</div>
-      <p class="proj-desc">A repeatable kit that moves Notion pages, trees, and database hubs into gov-cloud Confluence: images, attachments, child pages, and the links between them. Used it to move the IT knowledge base and several teams' docs without hand-copying.</p>
+      <p class="proj-desc">A repeatable kit that moves Notion pages, trees, and database hubs into gov-cloud Confluence: images, attachments, child pages, and the links between them. Used it to move the IT and team knowledge bases without hand-copying.</p>
       <div class="proj-pills"><span class="proj-pill">Python</span><span class="proj-pill">Notion API</span><span class="proj-pill">Confluence API</span></div>
-    </div>
-
-    <div class="proj-card">
-      <div class="proj-name">AI cost governance</div>
-      <p class="proj-desc">Put every team's AI API usage behind a self-hosted gateway with SCIM, RBAC, budgets, and an approved model list. Wrote the key request process and trained the help desk and systems engineers on issuing keys.</p>
-      <div class="proj-pills"><span class="proj-pill">AI gateway</span><span class="proj-pill">SCIM</span><span class="proj-pill">RBAC</span><span class="proj-pill">CMMC</span></div>
     </div>
 
   </div>
@@ -517,7 +562,8 @@
 
     <div class="proj-card">
       <div class="proj-name">M365 Commercial → GCC Migration</div>
-      <p class="proj-desc">Led a full M365 tenant migration to Government Community Cloud for federal compliance. Rebuilt RBAC, Conditional Access, and security controls, then migrated mailboxes, SharePoint, and Teams with zero data loss.</p>
+      <p class="proj-credit">Shared work with the IT team</p>
+      <p class="proj-desc">Co-led the Microsoft 365 tenant migration from Commercial to Government Community Cloud. Configured security controls, RBAC assignments, and conditional access policies to meet government cloud compliance requirements.</p>
       <div class="proj-pills"><span class="proj-pill">Microsoft 365</span><span class="proj-pill">GCC</span><span class="proj-pill">RBAC</span><span class="proj-pill">Conditional Access</span></div>
     </div>
 
@@ -599,6 +645,26 @@
       </div>
     </div>
 
+    <div class="cert-card">
+      <div class="cert-info">
+        <div class="cert-name">CompTIA Security+</div>
+        <div class="cert-issuer">CompTIA</div>
+      </div>
+      <div class="cert-right">
+        <span class="cert-badge progress">In progress</span>
+      </div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-info">
+        <div class="cert-name">Microsoft Certified: Azure Fundamentals</div>
+        <div class="cert-issuer">Microsoft</div>
+      </div>
+      <div class="cert-right">
+        <span class="cert-badge progress">In progress</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -639,7 +705,7 @@
 
 <footer>
   <p>Jesse Dean II &nbsp;·&nbsp; Nashville, TN</p>
-  <p>IT Support &amp; Systems Engineer</p>
+  <p>Corporate Systems Engineer</p>
 </footer>
 
 <script>
