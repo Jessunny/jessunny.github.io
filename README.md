@@ -12,7 +12,6 @@ Personal portfolio site for Jesse Dean II, Corporate Systems Engineer based in N
 - **Experience** — Expandable accordion cards for each role with summaries and key accomplishments
 - **Projects** — what I own (Atlassian platform, the Okta access model, GitHub identity), things I built or helped build, and earlier projects
 - **Certifications** — Earned certs with links to Credly, plus the ones in progress
-- **Connect** — Contact form powered by Formspree (email stays private) + links to LinkedIn, GitHub, and Credly
 
 ---
 
@@ -20,7 +19,6 @@ Personal portfolio site for Jesse Dean II, Corporate Systems Engineer based in N
 
 - Pure HTML + CSS + vanilla JS — no frameworks
 - [Inter](https://fonts.google.com/specimen/Inter) via Google Fonts
-- [Formspree](https://formspree.io) for contact form submissions
 - Hosted on [GitHub Pages](https://pages.github.com)
 - Dark theme (`#0d1117` base) inspired by GitHub's color system
 

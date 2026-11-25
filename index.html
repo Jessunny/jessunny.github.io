@@ -155,35 +155,6 @@
   .app-logo.dark-bg { background: #1a1a2e; }
   .app-logo.trans { background: transparent; padding: 0; }
 
-  /* CONNECT */
-  .connect-intro { font-size: 0.9rem; color: var(--text2); margin-bottom: 1.75rem; max-width: 680px; line-height: 1.75; }
-  .connect-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 3rem; align-items: start; }
-  .contact-form { display: flex; flex-direction: column; gap: 0.6rem; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
-  .contact-form input,
-  .contact-form textarea {
-    background: var(--bg2); border: 1px solid var(--border); border-radius: 7px;
-    padding: 0.65rem 0.9rem; color: var(--text); font-family: var(--sans);
-    font-size: 0.85rem; outline: none; transition: border-color 0.15s; resize: none; width: 100%;
-  }
-  .contact-form input::placeholder, .contact-form textarea::placeholder { color: var(--text3); }
-  .contact-form input:focus, .contact-form textarea:focus { border-color: var(--accent); }
-  .form-btn {
-    align-self: flex-start; background: var(--accent2); color: #fff; border: none;
-    border-radius: 7px; padding: 0.55rem 1.2rem; font-size: 0.83rem; font-weight: 600;
-    cursor: pointer; transition: background 0.15s; font-family: var(--sans);
-  }
-  .form-btn:hover { background: #1158c7; }
-  .form-note { font-size: 0.78rem; color: var(--green); margin-top: 0.25rem; min-height: 1rem; }
-  .connect-links { display: flex; flex-direction: column; gap: 0.5rem; }
-  .connect-row { display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 1rem; border: 1px solid var(--border); border-radius: 9px; text-decoration: none; transition: border-color 0.15s, background 0.15s; background: var(--bg); }
-  .connect-row:hover { border-color: var(--border2); background: var(--bg2); text-decoration: none; }
-  .connect-left { display: flex; align-items: center; gap: 0.75rem; }
-  .connect-type { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text3); min-width: 62px; }
-  .connect-val { font-size: 0.855rem; color: var(--text); }
-  .connect-arrow { font-size: 0.75rem; color: var(--text3); }
-  @media (max-width: 640px) { .connect-grid { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } }
-
   footer { border-top: 1px solid var(--border); padding: 1.5rem 2rem; max-width: var(--w); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
   footer p { font-size: 0.775rem; color: var(--text3); }
 
@@ -231,7 +202,6 @@
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#certifications">Certifications</a></li>
-    <li><a href="#connect">Connect</a></li>
   </ul>
 </nav>
 
@@ -242,7 +212,6 @@
   <p class="hero-role">Corporate Systems Engineer</p>
   <p class="hero-desc">I work on identity, access, and the systems teams use every day. Right now that's inside FedRAMP and CMMC boundaries, where a lot of the usual tools aren't allowed, so I build what's missing. I own Okta identity automation and the Atlassian platform at my company, and I co-built the Slack service that turns help requests into Jira tickets.</p>
   <div class="hero-btns">
-    <a href="#connect" class="cta">Get in touch</a>
     <a href="https://www.linkedin.com/in/jesse-dean-ii/" target="_blank" rel="noopener">LinkedIn ↗</a>
     <a href="https://github.com/Jessunny" target="_blank" rel="noopener">GitHub ↗</a>
     <a href="https://www.credly.com/users/jesse-dean.7c10e070" target="_blank" rel="noopener">Credly ↗</a>
@@ -672,41 +641,6 @@
   </div>
 </section>
 
-<!-- CONNECT -->
-<section id="connect" class="section">
-  <p class="section-kicker">Get in touch</p>
-  <h2 class="section-title">Connect</h2>
-  <p class="connect-intro">Open to new opportunities and conversations around identity, IT infrastructure, and automation. Send a message below or find me on any of the links.</p>
-
-  <div class="connect-grid">
-    <form class="contact-form" onsubmit="sendMsg(event)">
-      <div class="form-row">
-        <label for="cf-name" class="sr-only">Your name</label><input type="text" id="cf-name" placeholder="Your name" autocomplete="name" required />
-        <label for="cf-email" class="sr-only">Your email</label><input type="email" id="cf-email" placeholder="Your email" autocomplete="email" required />
-      </div>
-      <label for="cf-subject" class="sr-only">Subject</label><input type="text" id="cf-subject" placeholder="Subject" required />
-      <label for="cf-message" class="sr-only">Your message</label><textarea id="cf-message" placeholder="Your message" rows="5" required></textarea>
-      <button type="submit" class="form-btn">Send message ↗</button>
-      <p class="form-note" id="form-status" role="status" aria-live="polite"></p>
-    </form>
-
-    <div class="connect-links">
-      <a href="https://www.linkedin.com/in/jesse-dean-ii/" target="_blank" rel="noopener" class="connect-row">
-        <div class="connect-left"><span class="connect-type">LinkedIn</span><span class="connect-val">/in/jesse-dean-ii</span></div>
-        <span class="connect-arrow">↗</span>
-      </a>
-      <a href="https://github.com/Jessunny" target="_blank" rel="noopener" class="connect-row">
-        <div class="connect-left"><span class="connect-type">GitHub</span><span class="connect-val">/Jessunny</span></div>
-        <span class="connect-arrow">↗</span>
-      </a>
-      <a href="https://www.credly.com/users/jesse-dean.7c10e070" target="_blank" rel="noopener" class="connect-row">
-        <div class="connect-left"><span class="connect-type">Credly</span><span class="connect-val">jesse-dean credentials</span></div>
-        <span class="connect-arrow">↗</span>
-      </a>
-    </div>
-  </div>
-</section>
-
 <footer>
   <p>Jesse Dean II &nbsp;·&nbsp; Nashville, TN</p>
   <p>Corporate Systems Engineer</p>
@@ -715,40 +649,6 @@
 <script>
   function toggleExp(btn) { btn.setAttribute('aria-expanded', btn.closest('.exp-card').classList.toggle('open')); }
   function toggleAbout(btn) { btn.setAttribute('aria-expanded', btn.closest('.about-card').classList.toggle('open')); }
-
-  async function sendMsg(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('.form-btn');
-    const status = document.getElementById('form-status');
-    btn.disabled = true;
-    btn.textContent = 'Sending…';
-    const body = {
-      name:    document.getElementById('cf-name').value,
-      email:   document.getElementById('cf-email').value,
-      subject: document.getElementById('cf-subject').value,
-      message: document.getElementById('cf-message').value,
-      _replyto: document.getElementById('cf-email').value,
-    };
-    try {
-      const res = await fetch('https://formspree.io/f/meepkbaq', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(body)
-      });
-      if (res.ok) {
-        status.textContent = "Message sent. I'll get back to you soon.";
-        status.style.color = 'var(--green)';
-        e.target.reset();
-      } else {
-        throw new Error();
-      }
-    } catch {
-      status.textContent = 'Something went wrong. Try reaching out on LinkedIn.';
-      status.style.color = '#f85149';
-    }
-    btn.disabled = false;
-    btn.textContent = 'Send message ↗';
-  }
 </script>
 </body>
 </html>
